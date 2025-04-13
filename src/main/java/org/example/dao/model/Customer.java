@@ -3,16 +3,15 @@ package org.example.dao.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
     private static long serialVersionUUID = 1L;
     private Long id;
@@ -23,6 +22,16 @@ public class Customer {
     private LocalDate createdAt;
     private LocalDate updatedAt;
     private Boolean isActive;
-//    private List<Card> cards = new ArrayList<>();
+    private List<Card> cards;
 
+    public Customer(Long id, String name, String surname, String patronymic, LocalDate birthDate, LocalDate createdAt, LocalDate updatedAt, Boolean isActive) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.birthDate = birthDate;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.isActive = isActive;
+    }
 }

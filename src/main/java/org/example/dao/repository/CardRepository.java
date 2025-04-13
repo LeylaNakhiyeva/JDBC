@@ -24,7 +24,7 @@ public class CardRepository {
         preparedStatement.setLong(1, card.getCustomerId());
         preparedStatement.setLong(2, card.getCardNumber());
         preparedStatement.setString(3, card.getCvv());
-        preparedStatement.setObject(4, card.getCurrency());   // setObject
+        preparedStatement.setObject(4, card.getCurrency().name(), java.sql.Types.VARCHAR);
         preparedStatement.setDate(5, Date.valueOf(card.getCreatedAt()));
         preparedStatement.setBoolean(6, card.getIsActive());
 
@@ -32,7 +32,7 @@ public class CardRepository {
 
     public List<Card> fetchAllCards(){
         try(Connection connection = DatabaseConnection.getDatabaseConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT* FROM cards");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT* FROM card");
             ResultSet resultSet = preparedStatement.executeQuery()){
             List<Card> cardList = new ArrayList<>();
             while (resultSet.next()){

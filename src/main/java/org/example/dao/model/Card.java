@@ -3,6 +3,7 @@ package org.example.dao.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.example.enums.CurrencyEnum;
 
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @Builder
+
 public class Card {
     private Long id;
     private Long customerId;

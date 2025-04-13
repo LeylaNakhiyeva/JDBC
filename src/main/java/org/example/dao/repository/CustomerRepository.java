@@ -12,7 +12,7 @@ import java.util.List;
 public class CustomerRepository {
     public void saveCustomer(Customer customer) {
         try (Connection connection = DatabaseConnection.getDatabaseConnection()) {
-            PreparedStatement prepareStatement = connection.prepareStatement("insert into customer(name, surname, patronymic, birth_date, created_at, is_active) values(?, ?, ?, ?, ?, ?");
+            PreparedStatement prepareStatement = connection.prepareStatement("insert into customer(name, surname, patronymic, birth_date, created_at, is_active) values(?, ?, ?, ?, ?, ?)");
             buildPreparedStatement(prepareStatement, customer);
 
             prepareStatement.executeUpdate();

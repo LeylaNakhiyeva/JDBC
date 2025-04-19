@@ -1,14 +1,11 @@
 package org.example.strategy;
 
-import java.util.Scanner;
+import org.example.dao.service.CardService;
 
 public class CardToCardStrategy implements MenuStrategy{
+    private final CardService cardService = new CardService();
     @Override
     public void execute() {
-        Scanner sc= new Scanner(System.in);
-        System.out.println("Enter card number to :");
-        long cardNumber = sc.nextLong();
-
-
+        cardService.transfer();
     }
 }

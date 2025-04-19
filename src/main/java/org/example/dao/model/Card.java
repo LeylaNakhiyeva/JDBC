@@ -1,9 +1,6 @@
 package org.example.dao.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.example.enums.CurrencyEnum;
 
 import java.time.LocalDate;
@@ -21,7 +18,7 @@ public class Card {
     private LocalDate createdAt;
     private LocalDate updatedAt;
     private Boolean isActive;
-
-
+    private Double balance;
+    private Long transactionNo;
 
 }

@@ -10,10 +10,8 @@ import java.util.List;
 
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
-    private static long serialVersionUUID = 1L;
     private Long id;
     private String name;
     private String surname;
@@ -22,7 +20,6 @@ public class Customer {
     private LocalDate createdAt;
     private LocalDate updatedAt;
     private Boolean isActive;
-    private List<Card> cards;
 
     public Customer(Long id, String name, String surname, String patronymic, LocalDate birthDate, LocalDate createdAt, LocalDate updatedAt, Boolean isActive) {
         this.id = id;

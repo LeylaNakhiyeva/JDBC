@@ -39,6 +39,7 @@ public class UserService {
                 .build();
 
         customerRepository.saveCustomer(customer);
+        System.out.println("Successful operation");
     }
 
     public List<Customer> fetchAllCustomers(){

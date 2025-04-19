@@ -2,10 +2,10 @@ package org.example.strategy;
 
 import org.example.dao.service.CardService;
 
-public class UpdateCardStrategy implements MenuStrategy {
+public class BlockCardStrategy implements MenuStrategy{
     private final CardService cardService = new CardService();
     @Override
     public void execute() {
-        cardService.updateCard();
+        cardService.blockCard();
     }
 }

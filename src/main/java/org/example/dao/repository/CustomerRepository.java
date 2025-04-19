@@ -1,6 +1,5 @@
 package org.example.dao.repository;
 
-import lombok.extern.slf4j.Slf4j;
 import org.example.dao.model.Customer;
 import org.example.database.DatabaseConnection;
 
